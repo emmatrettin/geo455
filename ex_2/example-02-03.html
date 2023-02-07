@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>ESC/GEO 455 (SP22) DEMO</title><!--change to your name -->
+        <title>Emma Trettin</title><!--change to your name -->
         <meta name="description" content="An interactive getting started guide">
         <!-- change / playaround with different css elements to customize and build your own webpage-->
         <style>
@@ -21,7 +21,7 @@
                 font-family: "Lora", serif;
                 letter-spacing: .04em;
                 padding: 5px 5px;
-                background-color: rgba(99, 200, 228, 0.5);
+                background-color: #ff6699;
                 border: 1px solid grey;
                 border-radius: 5px;
                 text-align: center;
@@ -53,7 +53,7 @@
                 font-size: 1em;
                 font-family: "Lora", serif;
                 letter-spacing: .04em;
-                background-color: rgba(99, 200, 228, 0.5);
+                background-color: #ff6699;
                 border: 1px solid grey;
                 border-radius: 15px;
             }
@@ -69,7 +69,7 @@
                 font-family: "Lora", serif;
                 letter-spacing: .04em;
                 padding: 10px 15px;
-                background-color: rgba(99, 200, 228, 0.5);
+                background-color: #ff6699;
                 border: 1px solid grey;
                 border-radius: 15px;
             }
@@ -89,6 +89,36 @@
                 margin: 4px;
                 padding: 2px;
             }
+            
+            #container #labbox {
+                background-color: rgba(204, 153, 255,0.7);
+                padding: 10px;
+                border: 1px solid grey;
+                border-radius: 15px;
+            }
+            
+            #container #exbox {
+                background-color: rgba(204, 153, 255,0.7);
+                padding: 10px;
+                border: 1px solid grey;
+                border-radius: 15px;
+            }
+            
+            #container #finalbox {
+               background-color: rgba(204, 153, 255,0.7);
+                padding: 10px;
+                border: 1px solid grey;
+                border-radius: 15px;
+            }
+            
+            #container #contact
+            {
+               background-color: rgba(204, 153, 255,0.7);
+                padding: 10px;
+                border: 1px solid grey;
+                border-radius: 15px;
+            }
+            
         </style>
     </head>
     <body>
@@ -97,54 +127,64 @@
               <p><em>Dept. of Geography and Earth Science, University of Wisconsin - La Crosse</em></p>
                 
             </div>
-            
             <div id= "leftsidebar">
-                <h3>Lab Assignments</h3>
-                <ul id="menulist">
-                  <li class="menuitem"><a href="lab_1/geo455_lab1.html">Lab 1</a></li>
-                  <li class="menuitem"><a href="lab_2/geo455_lab2.html">Lab 2</a></li>
-                  <li class="menuitem"><a href="lab_3/geo455_lab3.html">Lab 3</a></li>
-                  <li class="menuitem"><a href="lab_4/geo455_lab4.html">Lab 4</a></li>
-                  <li class="menuitem"><a href="lab_5/geo455_lab5.html">Lab 5</a></li>
-                  <li class="menuitem"><a href="lab_6/geo455_lab6.html">Lab 6</a></li>
-                  <li class="menuitem"><a href="lab_7/geo455_lab7.html">Lab 7</a></li>
-                  <li class="menuitem"><a href="lab_8/geo455_lab8.html">Lab 8</a></li>
-                  <li class="menuitem"><a href="lab_9/geo455_lab9.html">Lab 9</a></li>
-                </ul>
-                <h3>Exercises</h3>
-                 <ul  id="menulist">
-                    <li class="menuitem"><a href="ex_1/geo455_ex1.html">Ex 1</a></li>
-                    <li class="menuitem"><a href="ex_2/geo455_ex2.html">Ex 2</a></li>
-                    <li class="menuitem"><a href="ex_3/geo455_ex3.html">Ex 3</a></li>
-                    <li class="menuitem"><a href="ex_4/geo455_ex4.html">Ex 4</a></li>
-                    <li class="menuitem"><a href="ex_5/geo455_ex5.html">Ex 5</a></li>
-                    <li class="menuitem"><a href="ex_6/geo455_ex6.html">Ex 6</a></li>
-                </ul>
-                <h3>Final Project</h3>
-                 <ul  id="menulist">
-                    <li class="menuitem"><a href="ex_1/final_project.html">Final Project</a></li>
-                </ul>
+                <div id="labbox">
+                    <h3>Lab Assignments</h3> <!--Turn the left column into different boxes for lab assignments, exercises, and final project, change color?-->
+                    <ul id="menulist">
+                      <li class="menuitem"><a href="lab_1/geo455_lab1.html">Lab 1</a></li>
+                      <li class="menuitem"><a href="lab_2/geo455_lab2.html">Lab 2</a></li>
+                      <li class="menuitem"><a href="lab_3/geo455_lab3.html">Lab 3</a></li>
+                      <li class="menuitem"><a href="lab_4/geo455_lab4.html">Lab 4</a></li>
+                      <li class="menuitem"><a href="lab_5/geo455_lab5.html">Lab 5</a></li>
+                      <li class="menuitem"><a href="lab_6/geo455_lab6.html">Lab 6</a></li>
+                      <li class="menuitem"><a href="lab_7/geo455_lab7.html">Lab 7</a></li>
+                      <li class="menuitem"><a href="lab_8/geo455_lab8.html">Lab 8</a></li>
+                      <li class="menuitem"><a href="lab_9/geo455_lab9.html">Lab 9</a></li>
+                    </ul>
+                </div> <br>
+                
+                <div id="exbox">
+                    <h3>Exercises</h3>
+                     <ul  id="menulist">
+                        <li class="menuitem"><a href="ex_1/geo455_ex1.html">Ex 1</a></li>
+                        <li class="menuitem"><a href="ex_2/geo455_ex2.html">Ex 2</a></li>
+                        <li class="menuitem"><a href="ex_3/geo455_ex3.html">Ex 3</a></li>
+                        <li class="menuitem"><a href="ex_4/geo455_ex4.html">Ex 4</a></li>
+                        <li class="menuitem"><a href="ex_5/geo455_ex5.html">Ex 5</a></li>
+                        <li class="menuitem"><a href="ex_6/geo455_ex6.html">Ex 6</a></li>
+                    </ul>
+                </div> <br>
+               
+                <div id="finalbox">
+                    <h3>Final Project</h3>
+                     <ul  id="menulist">
+                        <li class="menuitem"><a href="ex_1/final_project.html">Final Project</a></li>
+                    </ul>
+                </div>
             </div>
+           
             <div id="rightsidebar">
                 <p> </p>
                 <img src="AvatarMaker.png" align= "center" width="200" height="200">
                 <p></p>
-                <h3> Contact:</h3>
-                <h4><em>Dr. Gargi Chaudhuri</em></h4>
-               <a href="mailto:gchaudhuri@uwlax.edu">gchaudhuri@uwlax.edu</a>
+                <div id="contact">
+                    <h3> Contact:</h3>
+                    <h4><em>Emma Trettin</em></h4>
+                   <a href="mailto:trettin6403@uwlax.edu">trettin6403@uwlax.edu</a>
+                </div>
+                
 
             </div>
             <div id="main"> 
-                <h2>This is a demo guide!</h2> <!-- Delete this header when you adapt the page -->   
+                <!-- Delete this header when you adapt the page -->   
                     <p>
-                        Welcome to Wemapping course. This is a very minimalist and simple webpage that you will get started with for your labs. I expect as the semester progresses you will update and refine this page to show your skills. 
+                        Welcome to Wemapping. As the semester goes on I will be using my gained knowledge to update and refine my webpage.
 
                     </p>
      
                     <h3>About me</h3>
                     <p>
-                        <em>Write about yourself here</em> <br>
-                        Briefly talk about yourself. Use formatting tags as you have learned in class and lab assignments. Add a photo or avatarof yourself.
+                        I grew up in rural Minnesota, northwest of La Crosse. I graduated high school in 2019 and did my first year of undergrad at St. Catherine University, in St. Paul, MN. I realized that I needed a different space in order to continue my education and decided to go on 2 campus tours; 1 is Eau Claire and 1 in La Crosse. I was expecting myself to go to Eau Claire but as soon as I got to La Crosse I knew this where I wanted to go. <br> <br>Now I am a senior, finishing up my studies as a Geography Major with a double minor in Literary and Cultural Studies and Earth Science. I graduate in May! <br> <br> I plan on staying in the driftless region for a while after graduation, and hopefully getting some experience in different fields available for Geography majors. I will be applying to graduate school after a gap year. I want to study geomorphology.
                         
                     </p>
            </div>
