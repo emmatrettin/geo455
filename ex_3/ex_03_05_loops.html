@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript For Loop</h2>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+    var num = "";
+    
+    for (var i = 5; i < 12; i++) { // change to a different number
+        num += "The number is " + i + "<br>";
+    }
+    document.getElementById("demo").innerHTML = num;
+    
+    var num_brk = "";
+    
+    for (var z = 4; z < 15; z++) {
+        if(z===11) {break;}
+        num_brk += "The number is " + z + " lets loop again" + "<br>";
+    }
+    document.getElementById("demo1").innerHTML = num_brk;
+    
+    
+    var cars = ["Tesla", "Volvo", "BMW", "Ford", "Fiat", "Audi"];
+    
+    var carnames = "";
+    
+    for (var j = 0; j < cars.length; j++) {
+        carnames += cars[j] + "<br>";
+    }
+    document.getElementById("demo2").innerHTML = carnames;
+
+    var colorguard = ["Dance", "Flag", "Rifle", "Sabre", "Air Blade"];
+    var colorguardequip = "";
+    for (var c = 0; c < colorguard.length; c++) {
+        colorguardequip += colorguard[c] + "<br>";
+    }
+    document.getElementById("demo3").innerHTML = colorguardequip;
+    
+</script>
+
+
+</body>
+</html>
