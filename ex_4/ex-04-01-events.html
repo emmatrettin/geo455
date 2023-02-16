@@ -23,17 +23,18 @@
         method to add many events on the same button.</h3>
     <button id="myBtn3">Try it!!</button>
     <p id="demo3"></p>
+<!-- this part of the script ^ is the layout and order in which your elements are going to show up -->
 
-
+<!-- The script below is the java script commands that correspond to the id's that were created in HTML.-->
 
 <script>
-    
+//commenting in java script is different. makes me angry :(
     document.getElementById("myBtn1").addEventListener("click", hello);
     
     function hello() {
         document.getElementById("demo1").innerHTML = 
             "JavaScript can change page contents!";
-            }
+    }
 
     
     
@@ -43,13 +44,13 @@
         document.getElementById("demo2").innerHTML = Date();
     }
     
-    
+ //the button is listening to the command of the event. the event is the action we are creating
     var x = document.getElementById("myBtn3");
     x.addEventListener("mouseover", myFunction);
     x.addEventListener("click", mySecondFunction);
     x.addEventListener("mouseout", myThirdFunction);
     
-    
+//these functions correspond to the variable above. the variable was created to condense the amount of coding for this action. the only thing to remember is to 
     function myFunction(){
         document.getElementById("demo3").innerHTML += "Moused over!<br>";
     }

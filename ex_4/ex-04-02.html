@@ -5,10 +5,11 @@
     </head>
     <body>
         <h2>Earth Poles Viewer</h2>
-        <img id="myImage" src="images/north.svg"><br>
-        <input type="button" value="North Pole" id="north">
+        <img id="myImage" src="images/north.svg"><br> <!--start with a default image-->
+        <input type="button" value="North Pole" id="north"> <!--this is the display of the botton, for the purposes of showing up on the page, and also creating the id-->
         <input type="button" value="South Pole" id="south">
         <script>
+//these are the functions
             function showNorth() {
                 document
                     .getElementById("myImage")
@@ -19,7 +20,7 @@
                     .getElementById("myImage")
                     .src = "images/south.svg";
             }
-            
+//this is where the function gets its action. Adding the event listener is what connects the html button to the js function            
             document
                 .getElementById("north")
                 .addEventListener("click", showNorth);
