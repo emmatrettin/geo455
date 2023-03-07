@@ -27,49 +27,49 @@ var myIcon1 = L.icon({
     iconUrl: 'images/icon_1.png',
     iconSize: [30, 30],
     iconAnchor: [0, 0],
-    popupAnchor: [15, 10],
+    popupAnchor: [15,10],
 });
 
 var myIcon2 = L.icon({
     iconUrl: 'images/icon_2.png',
     iconSize: [30, 30],
     iconAnchor: [0, 0],
-    popupAnchor: [15, 10],
+    popupAnchor: [15,10],
 });
 
 var myIcon3 = L.icon({
     iconUrl: 'images/icon_3.png',
     iconSize: [30, 30],
     iconAnchor: [0, 0],
-    popupAnchor: [15, 10],
+    popupAnchor: [15,10],
 });
 
 var myIcon4 = L.icon({
     iconUrl: 'images/icon_4.png',
     iconSize: [30, 30],
     iconAnchor: [0, 0],
-    popupAnchor: [15, 10],
+    popupAnchor: [15,10],
 });
 
 var myIcon5 = L.icon({
     iconUrl: 'images/icon_5.png',
     iconSize: [30, 30],
     iconAnchor: [0, 0],
-    popupAnchor: [15, 10],
+    popupAnchor: [15,10],
 });
 
 var myIcon6 = L.icon({
     iconUrl: 'images/icon_6.png',
     iconSize: [30, 30],
     iconAnchor: [0, 0],
-    popupAnchor: [15, 10],
+    popupAnchor: [15,10],
 });
 
 var myIcon7 = L.icon({
     iconUrl: 'images/icon_7.png',
     iconSize: [30, 30],
     iconAnchor: [0, 0],
-    popupAnchor: [15, 10],
+    popupAnchor: [15,10],
 });
 
 // Create custom popups with images
@@ -206,7 +206,7 @@ var firstTime = true;
 async function getISS() {
     var response = await fetch(api_url);
     var data = await response.json();
-    var { latitude, longitude } = data;
+    var { latitude, longitude }=data;
 
 //change the marker location based on the updated reading but keep map view default center
 marker.setLatLng([latitude, longitude]);
@@ -214,9 +214,9 @@ if (firstTime) {
     mymap.setView([6.794952075439587, 20.91148703911037], 3);
     firstTime = false;
 }
-document.getElementById('lat').textContent = latitude.toFixed(3);
-document.getElementById('lon').textContent = longitude.toFixed(3);
+document.getElementById('lat').textContent=latitude.toFixed(3);
+document.getElementById('lon').textContent=longitude.toFixed(3);
 }
 
 getISS();
-setInterval(getISS, 1000);
+setInterval(getISS,1000);
