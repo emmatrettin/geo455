@@ -1,7 +1,7 @@
 //Create the map variable
 var mymap = L.map("map", {
     center: [6.794952075439587, 20.91148703911037], 
-    zoom: 3;
+    zoom: 3});
 
 //Set up the baselayers
 var streets = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZ2NoYXVkaHVyaSIsImEiOiJjazBtcG5odG8wMDltM2JtcjdnYTgyanBnIn0.qwqjMomdrBMG36GQKXBlMw', {
