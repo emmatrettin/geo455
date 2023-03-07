@@ -101,21 +101,6 @@ coords = [
 ];
 
 // Marker Layergroup
-var landmarks = L.layerGroup();
-
-var greatwall = L.marker([40.43208734303398, 116.570439270903]).bindPopup(greatwallPopup, customOptions).addTo(landmarks);
-
-var chichen = L.marker([20.6793437423211, -88.56829451227937]).bindPopup(chichenPopup, customOptions).addTo(landmarks);
-
-var petra = L.marker([30.328713676465735, 35.44444802834926]).bindPopup(petraPopup, customOptions).addTo(landmarks);
-
-var machupichu = L.marker([-13.162932251747211, -72.54500581780444]).bindPopup(machuPopup, customOptions).addTo(landmarks);
-
-var christ = L.marker([-22.951728275037908, -43.210412100446604]).bindPopup(christPopup, customOptions).addTo(landmarks);
-
-var colo = L.marker([41.89040186252818, 12.492252355598225]).bindPopup(coloPopup, customOptions).addTo(landmarks);
-
-var taj = L.marker([27.175354762373193, 78.04214219760772]).bindPopup(tajPopup, customOptions).addTo(landmarks);
 
 var loc = L.layerGroup();
     L.marker(coords[0], {icon: myIcon1}).bindPopup(greatwallPopup, customOptions).addTo(loc);
