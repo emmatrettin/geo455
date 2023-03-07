@@ -151,9 +151,79 @@ var overlays = {
  var layerControl = L.control.layers(baseLayers, overlays, {collapsed: false}).addTo(mymap);
 
 //create locator map
-var miniMap = new L.Control.MiniMap(L.tilelayer('https://api.maptiler.com/maps/topo/{z}/{x}/{y}.png?key=tZnptaeI9RvKHsX18rbW'), {
+var miniMap = new L.Control.MiniMap(L.tileLayer('https://api.maptiler.com/maps/topo/{z}/{x}/{y}.png?key=tZnptaeI9RvKHsX18rbW'), {
     toggleDisplay: true,
-    minimized: true,
     position: 'bottomleft'
 }).addTo(mymap);
 
+//popup for showing XY coordinates on map
+//create an empty popup
+var popup = L.popup();
+//function to set popup contents
+function onMapClick(e) {
+    popup
+    .setLatLng(e.latlng)
+    .setContent(
+    "You clicked the map at -<br>" + "<b>long:</b>" + e.latlng.lng + "<br>" + "<b>lat:</b>" + e.latlng.lat
+    ).openOn(mymap);}
+
+//add event listener for click events
+mymap.addEventListener("click", onMapClick);
+
+//add navigation buttons
+L.easyButton(('1 height=50%'), function(btn, map){
+    map.setView(coords[0], 15);
+}).addTo(mymap);
+L.easyButton(('2 height=50%'), function(btn, map){
+    map.setView(coords[1], 15);
+}).addTo(mymap);
+L.easyButton(('3 height=50%'), function(btn, map){
+    map.setView(coords[2], 15);
+}).addTo(mymap);
+L.easyButton(('4 height=50%'), function(btn, map){
+    map.setView(coords[3], 15);
+}).addTo(mymap);
+L.easyButton(('5 height=50%'), function(btn, map){
+    map.setView(coords[4], 15);
+}).addTo(mymap);
+L.easyButton(('6 height=50%'), function(btn, map){
+    map.setView(coords[5], 15);
+}).addTo(mymap);
+L.easyButton(('7 height=50%'), function(btn, map){
+    map.setView(coords[6], 15);
+}).addTo(mymap);
+
+L.easyButton(('<img src="images/globe_icon.png", height=85%>'), function(btn, map){
+    map.setView([6.794952075439587, 20.91148703911037], 3);
+}).addTo(mymap);
+
+//making internation space station marker with a custon icon
+var issIcon = L.icon({
+    iconUrl: 'images/iss200.png',
+    iconSize: [80,52],
+    iconAnchor: [25,16]
+});
+var marker = L.marker([0,0], {icon: issIcon}).addTo(mymap);
+
+//call the iss real time data url
+var api_url = 'https://api.wheretheiss.at/v1/satellites/25544';
+var firstTime = true;
+
+//update the lat/long based on the updated reading
+async function getISS() {
+    var response = await fetch(api_url);
+    var data = await response.json();
+    var {latitude,longitude} = data;
+
+//change the marker location based on the updated reading but keep the map view in default center
+marker.setLatLng([latitude, longitude]);
+    if (firstTime) {
+        mymap.setView([6.794952075439587, 20.91148703911037], 3);
+        firstTime = false;
+    }
+    document.getElementById('lat').textContent = latitude.toFixed(3);
+    document.getElementById('lon').textContent = longitude.toFixed(3);
+}
+
+getISS();
+setInterval(getISS, 1000);

@@ -7,6 +7,8 @@
          <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
         <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-minimap/v1.0.0/Control.MiniMap.js'></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+        <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
     <style>
             body {
                 margin: 0;
@@ -19,7 +21,7 @@
                 position: fixed;
                 margin-top: 0;
                 top: 10px;
-                left: 70px;
+                left: 50px;
                 font-size: 2em;
                 font-family: "Lora", serif;
                 letter-spacing: .04em;
@@ -49,8 +51,6 @@
                 position: fixed;
                 bottom: 20px;
                 right: 10px;
-                width: 280px;
-                height: 300px;
                 padding: 0px 15px;
                 background-color: rgba(255, 255, 255, 0.7);
                 border: 1px solid grey;
@@ -74,9 +74,10 @@
             <h1 id="title">Lab 5: Wonders of the World</h1>
                 <div id="map"></div>
                 <div id="description">
-                    <h2>About This Assignment</h2>
-                       <p>We are working with layer controls in this lab. We have three layers: landmarks, basemaps, and SRTM 30m hillshade map using WMS service. Landmarks are based on encyclopedia Britannica's entry on <a href="https://www.britannica.com/list/new-seven-wonders-of-the-world">New Seven Wonders of the World</a> and the images are linked from Wikipedia. 
-                        <p>Map authored by Emma Trettin</p>
+                    <h3>Where is the International Space Station?</h3>
+                    <img src="images/iss200.png", height="50px", width="80px">
+                    <p>Latitude: <span id="lat"></span>°<br />
+                        Longitude: <span id="lon"></span>°</p>
                 </div>
             <script src="map_lab5.js"></script>
      </body>
