@@ -149,7 +149,7 @@ var overlays = {
  var layerControl = L.control.layers(baseLayers, overlays, {collapsed: false}).addTo(mymap);
 
 //Locator map
-var miniMap = new L.Control.MiniMap(L.tilelayer('https://api.maptiler.com/maps/topo/{z}/{x}/{y}.png?key=tZnptaeI9RvKHsX18rbW'), {
+var miniMap = new L.Control.MiniMap(L.tileLayer('https://api.maptiler.com/maps/topo/{z}/{x}/{y}.png?key=tZnptaeI9RvKHsX18rbW'), {
     toggleDisplay: true,
     minimized: true,
     position: 'bottonleft'
@@ -166,7 +166,7 @@ function onMapClick(e) {
         .setContent(
         "You clicked the map at -<br>" + 
         "<b>long:</b>" + e.latlng.lng + "<br>" + 
-        "<b>lat:</b>" + e.latlng.latitude
+        "<b>lat:</b>" + e.latlng.lat
     ).openOn(mymap);}
 
 //Add event listener for click events to show lat long on the map
