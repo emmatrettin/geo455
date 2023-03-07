@@ -1,7 +1,8 @@
 //Create the map variable
 var mymap = L.map("map", {
     center: [6.794952075439587, 20.91148703911037], 
-    zoom: 3});
+    zoom: 3,
+    });
 
 //Set up the baselayers
 var streets = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZ2NoYXVkaHVyaSIsImEiOiJjazBtcG5odG8wMDltM2JtcjdnYTgyanBnIn0.qwqjMomdrBMG36GQKXBlMw', {
@@ -11,7 +12,7 @@ var streets = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1
-}).addTo(mymap);
+});
 
 var grayscale = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZ2NoYXVkaHVyaSIsImEiOiJjazBtcG5odG8wMDltM2JtcjdnYTgyanBnIn0.qwqjMomdrBMG36GQKXBlMw', {
     maxZoom: 18,
@@ -20,56 +21,6 @@ var grayscale = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}
     id: 'mapbox/light-v9',
     tileSize: 512,
     zoomOffset: -1
-}).addTo(mymap);
-   
-//Set up icon variables
-var myIcon1 = L.icon({
-    iconUrl: 'images/icon_1.png',
-    iconSize: [30, 30],
-    iconAnchor: [0, 0],
-    popupAnchor: [15,10],
-});
-
-var myIcon2 = L.icon({
-    iconUrl: 'images/icon_2.png',
-    iconSize: [30, 30],
-    iconAnchor: [0, 0],
-    popupAnchor: [15,10],
-});
-
-var myIcon3 = L.icon({
-    iconUrl: 'images/icon_3.png',
-    iconSize: [30, 30],
-    iconAnchor: [0, 0],
-    popupAnchor: [15,10],
-});
-
-var myIcon4 = L.icon({
-    iconUrl: 'images/icon_4.png',
-    iconSize: [30, 30],
-    iconAnchor: [0, 0],
-    popupAnchor: [15,10],
-});
-
-var myIcon5 = L.icon({
-    iconUrl: 'images/icon_5.png',
-    iconSize: [30, 30],
-    iconAnchor: [0, 0],
-    popupAnchor: [15,10],
-});
-
-var myIcon6 = L.icon({
-    iconUrl: 'images/icon_6.png',
-    iconSize: [30, 30],
-    iconAnchor: [0, 0],
-    popupAnchor: [15,10],
-});
-
-var myIcon7 = L.icon({
-    iconUrl: 'images/icon_7.png',
-    iconSize: [30, 30],
-    iconAnchor: [0, 0],
-    popupAnchor: [15,10],
 });
 
 // Create custom popups with images
@@ -89,16 +40,55 @@ var tajPopup = "Taj Mahal, India<br/><img src='https://upload.wikimedia.org/wiki
 
 var customOptions ={'maxWidth': '150','className' : 'custom'};
 
-//Data Points
-coords = [
-    [40.43208734303398, 116.570439270903],
-    [41.89040186252818, 12.492252355598225],
-    [30.328713676465735, 35.44444802834926],
-    [20.6793437423211, -88.56829451227937],
-    [-13.162932251747211, -72.54500581780444],
-    [-22.951728275037908, -43.210412100446604],
-    [27.175354762373193, 78.04214219760772]
-];
+//set up icon variables
+var myIcon1 = L.icon({
+    iconUrl: 'images/icon_1.png',
+    iconSize: [30,30],
+    iconAnchor: [0,0],
+    popupAnchor: [15,10],
+});
+
+var myIcon2 = L.icon({
+    iconUrl: 'images/icon_2.png',
+    iconSize: [30,30],
+    iconAnchor: [0,0],
+    popupAnchor: [15,10],
+});
+
+var myIcon3 = L.icon({
+    iconUrl: 'images/icon_3.png',
+    iconSize: [30,30],
+    iconAnchor: [0,0],
+    popupAnchor: [15,10],
+});
+
+var myIcon4 = L.icon({
+    iconUrl: 'images/icon_4.png',
+    iconSize: [30,30],
+    iconAnchor: [0,0],
+    popupAnchor: [15,10],
+});
+
+var myIcon5 = L.icon({
+    iconUrl: 'images/icon_5.png',
+    iconSize: [30,30],
+    iconAnchor: [0,0],
+    popupAnchor: [15,10],
+});
+
+var myIcon6 = L.icon({
+    iconUrl: 'images/icon_6.png',
+    iconSize: [30,30],
+    iconAnchor: [0,0],
+    popupAnchor: [15,10],
+});
+
+var myIcon7 = L.icon({
+    iconUrl: 'images/icon_7.png',
+    iconSize: [30,30],
+    iconAnchor: [0,0],
+    popupAnchor: [15,10],
+});
 
 // Set up landmark variables and individual landmarks
 var landmarks = L.layerGroup();
@@ -117,28 +107,39 @@ var colo = L.marker([41.89040186252818, 12.492252355598225]).bindPopup(coloPopup
 
 var taj = L.marker([27.175354762373193, 78.04214219760772]).bindPopup(tajPopup, customOptions).addTo(landmarks);
 
-// Marker Layergroup
+//data points
+coords =[
+    [40.43208734303398, 116.570439270903],
+    [41.89040186252818, 12.492252355598225],
+    [30.328713676465735, 35.44444802834926],
+    [20.6793437423211, -88.56829451227937],
+    [-13.162932251747211, -72.54500581780444],
+    [-22.951728275037908, -43.210412100446604],
+    [27.175354762373193, 78.04214219760772]
+];
+
+//marker layergroup
 var loc = L.layerGroup();
-    L.marker(coords[0], {icon: myIcon1}).bindPopup(greatwallPopup, customOptions).addTo(loc);
-    L.marker(coords[1], {icon: myIcon2}).bindPopup(coloPopup, customOptions).addTo(loc);
-    L.marker(coords[2], {icon: myIcon3}).bindPopup(petraPopup, customOptions).addTo(loc);
-    L.marker(coords[3], {icon: myIcon4}).bindPopup(chichenPopup, customOptions).addTo(loc);
-    L.marker(coords[4], {icon: myIcon5}).bindPopup(machuPopup, customOptions).addTo(loc);
-    L.marker(coords[5], {icon: myIcon6}).bindPopup(christPopup, customOptions).addTo(loc);
-    L.marker(coords[6], {icon: myIcon7}).bindPopup(tajPopup, customOptions).addTo(loc);
-    loc.addTo(mymap);
+L.marker(coords[0], {icon: myIcon1}).bindPopup(greatwallPopup, customOptions).addTo(loc);
+L.marker(coords[1], {icon: myIcon2}).bindPopup(coloPopup, customOptions).addTo(loc);
+L.marker(coords[2], {icon: myIcon3}).bindPopup(petraPopup, customOptions).addTo(loc);
+L.marker(coords[3], {icon: myIcon4}).bindPopup(chichenPopup, customOptions).addTo(loc);
+L.marker(coords[4], {icon: myIcon5}).bindPopup(machuPopup, customOptions).addTo(loc);
+L.marker(coords[5], {icon: myIcon6}).bindPopup(christPopup, customOptions).addTo(loc);
+L.marker(coords[6], {icon: myIcon7}).bindPopup(tajPopup, customOptions).addTo(loc);
+loc.addTo(mymap);
 
-//Add line
+//add line
 var line = L.polyline(coords, {color: "red", weight: 7}).bindPopup("Travel Path");
-line.addTo(mymap);
+    line.addTo(mymap);
 
-//Scale Bar
+//add scale bar
 L.control.scale({position: 'bottomright', maxWidth: '150', metric: 'True'}).addTo(mymap);
 
 // Create menu items
 var baseLayers = {
     'Grayscale': grayscale,
-    'Streets': streets,
+    'Streets': streets
     };
 
 var overlays = {
@@ -149,91 +150,10 @@ var overlays = {
 //Create the menu
  var layerControl = L.control.layers(baseLayers, overlays, {collapsed: false}).addTo(mymap);
 
-//Locator map
-var miniMap = new L.Control.MiniMap(L.tileLayer('https://api.maptiler.com/maps/topo/{z}/{x}/{y}.png?key=tZnptaeI9RvKHsX18rbW'), {
+//create locator map
+var miniMap = new L.Control.MiniMap(L.tilelayer('https://api.maptiler.com/maps/topo/{z}/{x}/{y}.png?key=tZnptaeI9RvKHsX18rbW'), {
     toggleDisplay: true,
     minimized: true,
-    position: 'bottonleft'
+    position: 'bottomleft'
 }).addTo(mymap);
 
-//Pop-up for showing XY coordinates on map
-//create empty popup
-var popup = L.popup();
-
-//function to set popup coordinates
-function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent(
-        "You clicked the map at -<br>" + 
-        "<b>long:</b>" + e.latlng.lng + "<br>" + 
-        "<b>lat:</b>" + e.latlng.lat
-    ).openOn(mymap);}
-
-//Add event listener for click events to show lat long on the map
-mymap.addEventListener("click", onMapClick);
-
-//add navigation buttons
-L.easyButton(('1 height=50%'), function(btn, map){
-    map.setView(coords[0], 15);
-}).addTo(mymap);
-
-L.easyButton(('2 height=50%'), function(btn, map){
-    map.setView(coords[1], 15);
-}).addTo(mymap);
-
-L.easyButton(('3 height=50%'), function(btn, map){
-    map.setView(coords[2], 15);
-}).addTo(mymap);
-
-L.easyButton(('4 height=50%'), function(btn, map){
-    map.setView(coords[3], 15);
-}).addTo(mymap);
-
-L.easyButton(('5 height=50%'), function(btn, map){
-    map.setView(coords[4], 15);
-}).addTo(mymap);
-
-L.easyButton(('6 height=50%'), function(btn, map){
-    map.setView(coords[5], 15);
-}).addTo(mymap);
-
-L.easyButton(('7 height=50%'), function(btn, map){
-    map.setView(coords[6], 15);
-}).addTo(mymap);
-
-L.easyButton(('<img src="images/globe_icon.png", height=85%>'), function(btn, map){
-    map.setView([6.794952075439587, 20.91148703911037], 3);
-}).addTo(mymap);
-
-//Making Internation Space Station marker with a custom icon
-var issIcon = L.icon({
-    iconUrl: 'images/iss200.png',
-    iconSize: [80,52],
-    iconAnchor: [25,16]
-});
-var marker = L.marker([0,0], {icon: issIcon}).addTo(mymap);
-
-//Call the ISS real time data URL
-var api_url = 'https://api.wheretheiss.at/v1/satellites/25544';
-
-var firstTime = true;
-
-//Update the lat/long based on the updated reading everytime
-async function getISS() {
-    var response = await fetch(api_url);
-    var data = await response.json();
-    var { latitude, longitude }=data;
-
-//change the marker location based on the updated reading but keep map view default center
-marker.setLatLng([latitude, longitude]);
-if (firstTime) {
-    mymap.setView([6.794952075439587, 20.91148703911037], 3);
-    firstTime = false;
-}
-document.getElementById('lat').textContent=latitude.toFixed(3);
-document.getElementById('lon').textContent=longitude.toFixed(3);
-}
-
-getISS();
-setInterval(getISS,1000);
