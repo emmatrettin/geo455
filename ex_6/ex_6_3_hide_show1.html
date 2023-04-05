@@ -18,14 +18,13 @@
       <script>
           
        $(document).ready(function() {
-              $("img").click(function(){
-                  $(this).hide();
+              $("#hide-btn").click(function(){
+                  $("img").hide();
               });
-          });
           // add function for show
-          $(document).ready(function() {
-              $("button").click(function(){
-                  $(this).show();
+          
+              $("#show-btn").click(function(){
+                  $("img").show();
               });
           });
       </script>
@@ -41,6 +40,7 @@
            <img src="img/Thomson_&_Thompson.png">
        </div>
        <!-- add show button -->
-       <button>SHOW</button>
+       <button id='hide-btn'>HIDE</button>
+       <button id='show-btn'>SHOW</button>
    </body>
 </html>

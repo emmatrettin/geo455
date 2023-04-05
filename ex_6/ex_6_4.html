@@ -1,6 +1,6 @@
 <html>
    <head>
-      <title>Ex- 6-2: CSS manipulation</title>
+      <title>Ex- 6-4: CSS manipulation</title>
        <style>
            img {
                position: relative;
@@ -14,15 +14,25 @@
       </script>
 
       <script>
-          
-       
-          
-
+          $(document).ready(function() {
+              $("#button").click(function() {
+                  $("img").animate({left: '750px'});
+              });
+          });
       </script>
 
 	
    <body>
-      
+       <button id="button">Go</button>
+      <h1> Adventures of Tintin </h1>
+       <p> Main Characters </p>
+       <div>
+           <img src="img/tintin-milou.jpg">
+           <img src="img/captain-haddock_v2.jpg">
+           <img src="img/prof_calcu.jpg">
+           <img src="img/Thomson_&_Thompson.png">
+       </div>
 
+       
    </body>
 </html>
