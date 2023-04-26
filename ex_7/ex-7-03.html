@@ -38,7 +38,7 @@ L.tileLayer(
 
 // Add draggable marker
 var marker = 
-    L.marker([48.42, -122.068], {draggable: true})
+    L.marker([49.42, -123.068], {draggable: true})
     .bindPopup("This marker is draggable! Move it around...")
     .addTo(mymap)
     .openPopup();
@@ -49,6 +49,35 @@ marker.addEventListener("drag", function() {
 }); 
 
 
+var marker1 = 
+    L.marker([48.42, -122.068], {draggable: true})
+    .bindPopup("This marker is draggable! Move it around...")
+    .addTo(mymap)
+    .openPopup();
+    
+marker1.addEventListener("drag", function() {
+     console.log(marker1._latlng);
+});
+        
+var marker2 = 
+    L.marker([50.42, -120.068], {draggable: true})
+    .bindPopup("This marker is draggable! Move it around...")
+    .addTo(mymap)
+    .openPopup();
+    
+marker2.addEventListener("drag", function() {
+     console.log(marker2._latlng);
+}); 
+
+var marker3 = 
+    L.marker([45.42, -116.068], {draggable: true})
+    .bindPopup("This marker is draggable! Move it around...")
+    .addTo(mymap)
+    .openPopup();
+    
+marker3.addEventListener("drag", function() {
+     console.log(marker3._latlng);
+}); 
     </script>
 </body>
 </html>

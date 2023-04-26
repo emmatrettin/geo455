@@ -26,7 +26,7 @@
     <script>
     
 // Bounds   long/lat  
-var bounds = [-91.24767126466358, 43.82383654812337, -91.20748926566223, 43.80826537588756];
+var bounds = [-91.25950946588858, 43.82844894257076, -91.21311139053158,  43.806331451392985];
     
 // Initialize map
 var mymap = L.map("map").fitBounds([[bounds[1], bounds[0]], [bounds[3], bounds[2]]]);
@@ -37,33 +37,33 @@ L.tileLayer(
 ).addTo(mymap);
 
         
-var taco = L.icon({
-    iconUrl: 'img/taco.png',
+var hiker= L.icon({
+    iconUrl: 'img/hiker.png',
     iconSize: [30, 30],
     iconAnchor: [0, 0],
 });
 
 var me = L.icon({
-    iconUrl: 'img/me.png',
+    iconUrl: 'img/house.png',
     iconSize: [30, 30],
     iconAnchor: [0, 0],
     popupAnchor: [15,10],
 });
         
 // Add random points
-var targetPoint = turf.point([-91.23176163704308, 43.81594921072007], {"marker-color": "#0F0"});
+var targetPoint = turf.point([-91.22554208708264, 43.81477171253003], {"marker-color": "#0F0"});
 var points = turf.featureCollection([
-    turf.point([-91.23936969689734, 43.81680581566446]),
-    turf.point([-91.23932097132852, 43.817786255647775]),
-    turf.point([ -91.22887096966582, 43.81261677078325]),
-    turf.point([ -91.23939169368956, 43.814414585537016,])
+    turf.point([-91.22597617772, 43.82125440850927]),
+    turf.point([-91.2111883961318, 43.81207924025941]),
+    turf.point([-91.21123108973258, 43.82018688241191]),
+    turf.point([-91.25593049342864, 43.81672290583199]),
 ]);
 
 var nearest = turf.nearestPoint(targetPoint, points);
 
 L.geoJSON(points, {
           pointToLayer: function(feature,latlng){
-      return L.marker(latlng,{icon: taco});
+      return L.marker(latlng,{icon: hiker});
     }}).addTo(mymap);    
         
 L.geoJSON(targetPoint, {
@@ -75,12 +75,12 @@ L.geoJSON(targetPoint, {
 L.geoJSON(nearest, {
     pointToLayer: function(feature,latlng){
       return L.circleMarker(latlng,{
-          radius: 20,
+          radius: 30,
           stroke: true,
-          color: 'red',
+          color: 'purple',
           opacity: 1,
           weight: 2,
-          fill: false,
+          fill: true,
       });
     }}).addTo(mymap);
         

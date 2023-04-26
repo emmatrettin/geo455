@@ -26,7 +26,7 @@
     <script>
     
 // Bounds   long/lat  - feel free to change
-var bounds = [-125.06804948750015, 48.423227753628424, -80.67187497957025, 25.34283898116232];
+var bounds = [-94.73202020882516, 45.26173861318686, -80.67187497957025, 25.34283898116232];
     
 // Initialize map
 var mymap = L.map("map").fitBounds([[bounds[1], bounds[0]], [bounds[3], bounds[2]]]);
@@ -41,13 +41,18 @@ var uwlbuffer = turf.buffer(uwl, 50, {units: 'miles'});
 L.geoJSON(uwl).addTo(mymap);
 L.geoJSON(uwlbuffer).addTo(mymap);
         
-var uwec = turf.point([-91.48429454797873, 44.82312510110985]);
-var uwecbuffer = turf.buffer(uwec, 50, {units: 'miles'});  
-L.geoJSON(uwecbuffer).addTo(mymap);
-        L.geoJSON(uwec).addTo(mymap);
+var myhouse = turf.point([-94.52712010185219, 44.76743646866135]);
+var myhousebuffer = turf.buffer(myhouse, 50, {units: 'miles'});  
+L.geoJSON(myhousebuffer).addTo(mymap);
+        L.geoJSON(myhouse).addTo(mymap);
+        
+var stkates = turf.point([-93.18012330421028, 44.92310441127795]);
+var stkatesbuffer = turf.buffer(stkates, 50, {units: 'miles'});  
+L.geoJSON(stkatesbuffer).addTo(mymap);
+        L.geoJSON(stkates).addTo(mymap);
         
         
-var intersection = turf.intersect(uwlbuffer, uwecbuffer);
+var intersection = turf.intersect(uwlbuffer, myhousebuffer);
 L.geoJSON(intersection).addTo(mymap);
 
         
