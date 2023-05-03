@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Final Project</title>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+        <!--Links for easy button/take me home button-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+        <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+        <!--UPLOAD THE DATA SCRIPTS-->
+        <script src="deforest2015.js"></script>
+        <script src="propdef2015.js"></script>
+        <script src="shareforestarea.js"></script>
+        <!--buttons?-->
+        <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    </head>
+    <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: "whitesmoke";
+                font-family: "Noto Sans", sans-serif;
+                color: #3d3d3d;
+            }
+            #title {
+                position: fixed;
+                margin-top: 0;
+                top: 10px;
+                left: 50px;
+                font-size: 2em;
+                font-family: "Lora", serif;
+                letter-spacing: .04em;
+                padding: 10px 15px;
+                background-color: rgba(255, 255, 255, 0.5);
+                border: 1px solid grey;
+                border-radius: 3px;
+                z-index: 800;
+            }
+            #description h2 {
+                font-family: "Lora", serif;
+                letter-spacing: .04em;
+            }
+            #map {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+            }
+            .legend {
+                padding: 6px 8px;
+                line-height: 18px;
+                background: rgba(255,255,255,0.9);
+                box-shadow: 0 0 15px rgba(0,0,0,0.2);
+                border-radius: 5px;
+            }
+           .legend i {
+              width: 18px;
+              height: 18px;
+              float: left;
+              margin-right: 8px;
+              opacity: 0.7;
+            }
+            .custom .leaflet-popup-tip,
+            .custom .leaflet-popup-content-wrapper {
+                background: #000000;
+                color: #ffffff;
+            }
+            #description p {
+                font-size: .9em;
+                line-height: 1.5em;
+            }
+            #description a {
+                color: #005daa;
+                text-decoration: none;
+            }
+            #description a:hover {
+                text-decoration: underline;
+            }
+            #explanation {
+                position: fixed;
+                float: left;
+                top:150px;
+                left: 20px;
+                width: 280px;
+                padding: 0px 15px;
+                background-color: lightgray;
+                border: 1px solid black;
+                border-radius: 3px;
+                z-index: 800;
+            }
+            
+    </style>
+    <body bgcolor="#EDDD9E">
+        <h1 id="title">Final Project: Global Deforestation</h1>
+        <div id="map"></div>
+        <script src="finalproject_map.js"></script>
+        <button>Explanation</button>
+        <div id="explanation">
+            <h3>About Map</h3>
+            <p> This map showcases global deforestation data.  
+            </p>
+            <ol type="I">
+                <li>The proportion of deforestation layer shows how much deforestation is happening per year relative to the actual forest area of the country. </li> 
+                <li>The share of global forest area layer shows the percentage of the global forest area each country has.</li>
+                <li>The most common causes of deforestation are shown on the map in the location where they are the most predominant.</li>
+            </ol>
+            <p> Want to learn more? Check out these links! <br>
+            <a href="https://www.greenpeace.org/usa/forests/solutions-to-deforestation/">Solutions to Deforestation</a> <br>
+            <a href="https://www.unep.org/news-and-stories/story/inside-global-effort-save-worlds-forests">Inside the global effort to save the world's forests</a>
+            </p>
+            <h5>Map by: Emma Trettin</h5>
+        </div>
+     </body>
+</html>
