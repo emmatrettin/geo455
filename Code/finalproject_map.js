@@ -160,21 +160,21 @@ function style2(feature){
 
 //deforestation causes
 //popups with image
-var indonesiaPopup = "Indonesia<br/><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Riau_palm_oil_2007.jpg/1920px-Riau_palm_oil_2007.jpg' alt='deforestation in Sumatra' width='150px'/>"; 
+var indonesiaPopup = "Indonesia deforestation for palm oil<br/><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Riau_palm_oil_2007.jpg/1920px-Riau_palm_oil_2007.jpg' alt='deforestation in Sumatra' width='150px'/>"; 
 
 var malaysiaPopup = "Malaysia Palm Oil Plantation<br/><img src='https://upload.wikimedia.org/wikipedia/commons/f/f2/Oil_palm_plantations_in_Sarawak.jpg' alt='Malaysia palm oil plantation' width='150px'/>"; 
 
-var colombiaPopup = "Soil Conditions in Colombia <br/><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/STS61C-36-0029_Orinoco%2C_Meta_Rivers%2C_Colombia_and_Venezuela_January_1986.jpg/1024px-STS61C-36-0029_Orinoco%2C_Meta_Rivers%2C_Colombia_and_Venezuela_January_1986.jpg' alt='Colombia Aerial photo' width='150px'/>";
+var colombiaPopup = "Soil Conditions in Colombia after deforestation for palm oil production<br/><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/STS61C-36-0029_Orinoco%2C_Meta_Rivers%2C_Colombia_and_Venezuela_January_1986.jpg/1024px-STS61C-36-0029_Orinoco%2C_Meta_Rivers%2C_Colombia_and_Venezuela_January_1986.jpg' alt='Colombia Aerial photo' width='150px'/>";
 
-var nigeriaPopup = "Clear Cutting in Nigeria<br/><img src='https://upload.wikimedia.org/wikipedia/commons/b/ba/Deforestation_in_Nigeria_%283509228297%29.jpg' alt='Clear Cutting in Nigeria' width='150px'/>";
+var nigeriaPopup = "Clear Cutting in Nigeria for palm oil plantation<br/><img src='https://upload.wikimedia.org/wikipedia/commons/b/ba/Deforestation_in_Nigeria_%283509228297%29.jpg' alt='Clear Cutting in Nigeria' width='150px'/>";
 
-var thailandPopup = "Forest Burns in Thailand<br/><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Karen_rice_fields_controlled_burn.JPG/1280px-Karen_rice_fields_controlled_burn.JPG' alt='Forest Burns in Thailand' width='150px'/>";
+var thailandPopup = "Forest Burns in Thailand for palm oil production<br/><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Karen_rice_fields_controlled_burn.JPG/1280px-Karen_rice_fields_controlled_burn.JPG' alt='Forest Burns in Thailand' width='150px'/>";
 
 var brazilPopup = "Deforestation line in Brazil<br/><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Opera%C3%A7%C3%A3o_Hymenaea%2C_Julho-2016_%2829399454651%29.jpg/1280px-Opera%C3%A7%C3%A3o_Hymenaea%2C_Julho-2016_%2829399454651%29.jpg' alt='Deforestation line in Brazil' width='150px'/>";
 
-var peruPopup = "Deforestation in Peruvian Amazon<br/><img src='https://live.staticflickr.com/4848/32891352068_a55f970f34_b.jpg' alt='Deforestation in Peruvian Amazon' width='150px'/>";
+var peruPopup = "Deforestation in Peruvian Amazon for cattle grazing<br/><img src='https://live.staticflickr.com/4848/32891352068_a55f970f34_b.jpg' alt='Deforestation in Peruvian Amazon' width='150px'/>";
 
-var boliviaPopup = "Agriculture replacing forest area in Bolivia<br/><img src='https://upload.wikimedia.org/wikipedia/commons/b/b3/Caranavi_field5_lo_%284387016012%29.jpg' alt='Agriculture replacing forest area' width='150px'/>";
+var boliviaPopup = "Replacing forest area for cattle in Bolivia<br/><img src='https://upload.wikimedia.org/wikipedia/commons/b/b3/Caranavi_field5_lo_%284387016012%29.jpg' alt='Agriculture replacing forest area' width='150px'/>";
 
 var swedenPopup = "Logging in Sweden<br/><img src='https://upload.wikimedia.org/wikipedia/commons/e/ef/Piles_of_logs_beside_a_road_1.jpg' alt='Logging in Sweden' width='150px'/>";
 
@@ -186,13 +186,13 @@ var russiaPopup = "Wildfires in Siberia<br/><img src='https://live.staticflickr.
 
 var canadaPopup = "Aerial view of wildfires in Alberta, Canada<br/><img src='https://live.staticflickr.com/2412/5734695196_4a9b016414_b.jpg' alt='Aerial view of wildfires in Alberta, Canada' width='150px'/>";
 
-var drcPopup = "Unsustainable logging in Finland<br/><img src='https://upload.wikimedia.org/wikipedia/commons/0/04/Wood_exploitation_in_Finland.jpg' width='150px'/>";
+var drcPopup = "Deforestation for agricultural land in Democratic Republic of the Congo<br/><img src='https://live.staticflickr.com/1805/43394936502_f2271a7208_b.jpg' width='150px'/>";
 
-var papuanewguineaPopup = "Logging in USA<br/><img src='https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/fl48762262713-public-image.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=d8e928484167abe6b8dbb91a6b8ffaf0' alt='Logging in USA' width='150px'/>";
+var papuanewguineaPopup = "Deforestation for agricultural land in Papua New Guinea<br/><img src='https://live.staticflickr.com/4325/35502816890_d8bee8f7c5_b.jpg' alt='Deforestation for agricultural land in Papua New Guinea' width='150px'/>";
 
-var venezualaPopup = "Wildfires in Siberia<br/><img src='https://live.staticflickr.com/4891/46200452944_348f8c76b4_b.jpg' width='150px'/>";
+var venezualaPopup = "Deforestation for agricultural land in Venezuala<br/><img src='https://vociglobali.it/wp-content/uploads/2020/09/Deforestation-Romania-Hannes-Knapp_1220253-800x445.jpg' alt='Deforestation for agricultural land in Venezuala' width='150px'/>";
 
-var mexicoPopup = "Aerial view of wildfires in Alberta, Canada<br/><img src='https://live.staticflickr.com/2412/5734695196_4a9b016414_b.jpg' alt='Aerial view of wildfires in Alberta, Canada' width='150px'/>";
+var mexicoPopup = "Land cleared for agriculture in Mexico<br/><img src='https://upload.wikimedia.org/wikipedia/commons/f/f1/Opera%C3%A7%C3%A3o_Onda_Verde%2C_2014_%2829390177775%29.jpg' alt='Aerial view of wildfires in Alberta, Canada' width='150px'/>";
 
 var customOptions ={'maxWidth': '150','className' : 'custom'};
 
